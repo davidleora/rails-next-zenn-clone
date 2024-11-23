@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-git_source(:github){ |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
@@ -19,11 +19,16 @@ gem "rails", "~> 7.0.4"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
-    # pry コンソールを導入する
-    gem "pry-byebug" # デバッグ用
-    gem "pry-doc" # ドキュメント表示用
-    gem "pry-rails" # railsとpryを連携
+  # pry コンソールを導入する
+  gem "pry-byebug" # デバッグ用
+  gem "pry-doc" # ドキュメント表示用
+  gem "pry-rails" # railsとpryを連携
 
-    # テストフレームワーク rspec を導入する
-    gem "rspec-rails"
+  # テストフレームワーク rspec を導入する
+  gem "rspec-rails"
+
+  # rubocop を使えるようにする
+  gem "rubocop-faker" # テストデータを生成する
+  gem "rubocop-rails" # railsのコードをチェックする
+  gem "rubocop-rspec" # rspecのコードをチェックする
 end
