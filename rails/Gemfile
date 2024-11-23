@@ -18,9 +18,12 @@ gem "rails", "~> 7.0.4"
 # タイムゾーン情報を提供する（標準gem）
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
-# pry コンソールを導入する
 group :development, :test do
+    # pry コンソールを導入する
     gem "pry-byebug" # デバッグ用
     gem "pry-doc" # ドキュメント表示用
     gem "pry-rails" # railsとpryを連携
+
+    # テストフレームワーク rspec を導入する
+    gem "rspec-rails"
 end
