@@ -32,3 +32,5 @@ group :development, :test do
   gem "rubocop-rails" # railsのコードをチェックする
   gem "rubocop-rspec" # rspecのコードをチェックする
 end
+
+gem "rubocop-rspec_rails", "~> 2.30", require: false
